@@ -107,7 +107,7 @@ app.get('/latestModels', async (req, res) => {
 });
 
 
-//////Post methiods ("insertOne,insert")
+//////Post m
 
 app.post('/models',async(req,res)=>{
   const Data =req.body
