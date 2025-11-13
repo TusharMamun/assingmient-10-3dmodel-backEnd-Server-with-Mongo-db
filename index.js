@@ -54,7 +54,7 @@ const veryfeyToken = async (req, res, next) => {
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
     const db = client.db('AiMODELDAtabase');
     const modelCollection = db.collection('AllMOdels');
     const purchseCollection =db.collection('purchase')
@@ -91,7 +91,7 @@ const latestDAtaToken = async (req, res, next) => {
 };
 
 
-app.get('/latestModels', async (req, res) => {
+app.get('/latestModels',veryfeyToken, async (req, res) => {
   try {
     const result = await modelCollection
       .find()
