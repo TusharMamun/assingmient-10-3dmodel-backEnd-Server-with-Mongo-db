@@ -91,7 +91,7 @@ const latestDAtaToken = async (req, res, next) => {
 };
 
 
-app.get('/latestModels',veryfeyToken, async (req, res) => {
+app.get('/latestModels', async (req, res) => {
   try {
     const result = await modelCollection
       .find()
